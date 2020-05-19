@@ -1,19 +1,28 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect, useState } from "react";
+import * as Font from "expo-font";
+import { ActivityIndicator } from "react-native";
+import GaretaApp from "./GaretaApp";
 
-export default function App() {
+export default () => {
+  const [loaded, setLoaded] = useState(false);
+
+  /* eslint-disable global-require */
+  useEffect(() => {
+    const loadFont = async () => {
+      await Font.loadAsync({
+        "SourceSerifPro-Bold": require("./assets/fonts/SourceSerifPro-Bold.ttf"),
+        "SourceSerifPro-Regular": require("./assets/fonts/SourceSerifPro-Regular.ttf"),
+        "SourceSerifPro-SemiBold": require("./assets/fonts/SourceSerifPro-SemiBold.ttf")
+      });
+
+      setLoaded(true);
+    };
+
+    loadFont();
+  }, []);
+  /* eslint-enable global-require */
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    loaded ? <GaretaApp /> : <ActivityIndicator size="large" />
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+};
