@@ -3,6 +3,9 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import styled, { withTheme } from "styled-components";
 
+// Shared component
+import { Text } from "../components";
+
 // Hometab
 import HomeTopTab from "./HomeTopTab";
 
@@ -29,11 +32,13 @@ const BottomTab = ({ theme }) => (
     activeColor={theme.common.main}
     inactiveColor={theme.common.muted}
     barStyle={{ backgroundColor: "#fff" }}
+
   >
     <Tab.Screen
       name="Shop"
-      children={HomeTopTab}
+      children={() => <HomeTopTab theme={theme} />}
       options={{
+        tabBarLabel: <Text>Shop</Text>,
         tabBarIcon: ({ color }) => <MaterialCommunityIcons color={color} name="hanger" size={22} />
       }}
     />
@@ -41,6 +46,7 @@ const BottomTab = ({ theme }) => (
       name="Save"
       component={Save}
       options={{
+        tabBarLabel: <Text>Save</Text>,
         tabBarIcon: ({ color }) => <MaterialCommunityIcons color={color} name="heart-outline" size={22} />
       }}
     />
@@ -48,6 +54,7 @@ const BottomTab = ({ theme }) => (
       name="Music"
       component={Cool}
       options={{
+        tabBarLabel: <Text>Music</Text>,
         tabBarIcon: ({ color }) => <MaterialCommunityIcons color={color} name="music-clef-treble" size={22} />
       }}
     />
@@ -55,6 +62,7 @@ const BottomTab = ({ theme }) => (
       name="User"
       component={Profile}
       options={{
+        tabBarLabel: <Text>Account</Text>,
         tabBarIcon: ({ color }) => <MaterialCommunityIcons name="account-outline" color={color} size={22} />
       }}
     />
