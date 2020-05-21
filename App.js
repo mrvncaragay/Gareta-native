@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import * as Font from "expo-font";
 import { ActivityIndicator } from "react-native";
+import { ThemeProvider } from "styled-components";
+import * as Font from "expo-font";
+import theme from "./Theme";
 import GaretaApp from "./GaretaApp";
 
 export default () => {
@@ -23,6 +25,12 @@ export default () => {
   /* eslint-enable global-require */
 
   return (
-    loaded ? <GaretaApp /> : <ActivityIndicator size="large" />
+    loaded
+      ? (
+        <ThemeProvider theme={theme}>
+          <GaretaApp />
+        </ThemeProvider>
+      )
+      : <ActivityIndicator size="large" />
   );
 };

@@ -1,10 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { StatusBar } from "react-native";
 import styled from "styled-components";
-
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+
+// Shared component
+import { Topbar } from "./components";
 
 const Profile = styled.Text`
   font-family: 'SourceSerifPro-Bold';
@@ -29,9 +31,10 @@ const Featured = styled.Text`
 const BottomTab = createMaterialBottomTabNavigator();
 const TopTab = createMaterialTopTabNavigator();
 
-export default function App() {
+/* eslint-disable react/no-children-prop */
+export default () => {
   const createHomeTopTab = () => (
-    <TopTab.Navigator tabBarOptions={{ indicatorStyle: { backgroundColor: "red" } }}>
+    <TopTab.Navigator tabBarOptions={{ indicatorStyle: { backgroundColor: "#1c2b36" } }}>
       <TopTab.Screen name="Featured" component={Featured} />
       <TopTab.Screen name="Categories" component={Featured} />
     </TopTab.Navigator>
@@ -39,9 +42,8 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <View style={{ height: 70, backgroundColor: "#374e62" }}>
-        <Text>This is a head</Text>
-      </View>
+      <StatusBar backgroundColor="#1c2b36" />
+      <Topbar />
       <BottomTab.Navigator activeColor="black" barStyle={{ backgroundColor: "#fff" }}>
         <BottomTab.Screen name="Home" children={createHomeTopTab} />
         <BottomTab.Screen name="Profile" component={Profile} />
@@ -50,4 +52,4 @@ export default function App() {
       </BottomTab.Navigator>
     </NavigationContainer>
   );
-}
+};
