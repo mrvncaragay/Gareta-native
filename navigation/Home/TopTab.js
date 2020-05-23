@@ -2,11 +2,11 @@ import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 // Shared component
-import { Text } from "../components";
+import { Text } from "../../components";
 
 const Tab = createMaterialTopTabNavigator();
 
-const HomeTopTab = ({ theme }) => (
+const TopTab = ({ theme }) => (
   <Tab.Navigator
     tabBarOptions={{
       inactiveTintColor: theme.common.muted,
@@ -22,4 +22,4 @@ const HomeTopTab = ({ theme }) => (
   </Tab.Navigator>
 );
 
-export default HomeTopTab;
+export default TopTab;

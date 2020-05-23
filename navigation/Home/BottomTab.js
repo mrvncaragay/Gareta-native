@@ -1,13 +1,13 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import styled, { withTheme } from "styled-components";
+import styled from "styled-components";
 
 // Shared component
-import { Text } from "../components";
+import { Text } from "../../components";
 
 // Hometab
-import HomeTopTab from "./HomeTopTab";
+import TopTab from "./TopTab";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -36,7 +36,7 @@ const BottomTab = ({ theme }) => (
   >
     <Tab.Screen
       name="Shop"
-      children={() => <HomeTopTab theme={theme} />}
+      children={() => <TopTab theme={theme} />}
       options={{
         tabBarLabel: <Text>Shop</Text>,
         tabBarIcon: ({ color }) => <MaterialCommunityIcons color={color} name="hanger" size={22} />
@@ -69,4 +69,4 @@ const BottomTab = ({ theme }) => (
   </Tab.Navigator>
 );
 
-export default withTheme(BottomTab);
+export default BottomTab;
