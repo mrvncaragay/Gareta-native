@@ -7,6 +7,6 @@ export default styled.View`
   padding-bottom: 10px;
   padding-right: 15px;
   padding-left: 15px;
-  height: ${(props) => (props.height ? props.height : "60")}px;
+  height: ${(props) => (props.height ? props.height : "50")}px;
   background-color: ${(props) => props.theme.common.main};
 `;

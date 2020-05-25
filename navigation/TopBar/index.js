@@ -5,7 +5,10 @@ import { Paper } from "../../components";
 
 const TopBar = () => (
   <Paper>
-    <Text style={{ color: "white" }}>Sections</Text>
+    <Text style={{ color: "white", fontSize: 16 }} onPress={() => alert("called")}>
+      Men&apos;s
+      &#9660;
+    </Text>
     <View style={{
       width: 60,
       flexDirection: "row",
