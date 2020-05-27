@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator, CardStyleInterpolators } from "@react-navigation/stack";
 import BottomTab from "./BottomTab";
-import Category from "../../components/Category";
+import CategoryList from "../../components/CategoryList";
 
 const Tab = createStackNavigator();
 
@@ -11,7 +11,7 @@ const Home = () => (
 
     <Tab.Screen
       name="Category"
-      component={Category}
+      component={CategoryList}
       options={{
         animationEnabled: true,
         cardStyle: { backgroundColor: "transparent" },
