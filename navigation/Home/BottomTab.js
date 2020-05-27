@@ -1,7 +1,7 @@
 import React from "react";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
-import styled from "styled-components";
+import styled, { withTheme } from "styled-components";
 
 // Shared component
 import { Text } from "../../components";
@@ -69,4 +69,4 @@ const BottomTab = ({ theme }) => (
   </Tab.Navigator>
 );
 
-export default BottomTab;
+export default withTheme(BottomTab);
