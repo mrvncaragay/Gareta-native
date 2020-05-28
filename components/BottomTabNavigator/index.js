@@ -4,8 +4,7 @@ import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityI
 import styled, { withTheme } from "styled-components";
 import { Text } from "react-native";
 
-// Hometab
-import TopTab from "./TopTab";
+import TopTabNavigator from "../TopTabNavigator";
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -25,16 +24,15 @@ const Cool = styled.Text`
 `;
 
 /* eslint-disable react/no-children-prop */
-const BottomTab = ({ theme }) => (
+const BottomTabNavigator = ({ theme }) => (
   <Tab.Navigator
     activeColor={theme.common.main}
     inactiveColor={theme.common.muted}
     barStyle={{ backgroundColor: "#fff" }}
-
   >
     <Tab.Screen
       name="Shop"
-      children={() => <TopTab theme={theme} />}
+      children={() => <TopTabNavigator theme={theme} />}
       options={{
         tabBarLabel: <Text>Shop</Text>,
         tabBarIcon: ({ color }) => <MaterialCommunityIcons color={color} name="hanger" size={22} />
@@ -66,5 +64,4 @@ const BottomTab = ({ theme }) => (
     />
   </Tab.Navigator>
 );
-
-export default withTheme(BottomTab);
+export default withTheme(BottomTabNavigator);

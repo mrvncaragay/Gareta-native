@@ -13,7 +13,9 @@ const Text = styled.Text`
   color: ${(props) => props.theme.common.main}
 `;
 
-const TopTab = ({ theme }) => (
+const Tester = () => <Text style={{ top: 50 }}>Hi</Text>;
+
+const TopTabNavigator = ({ theme }) => (
   <>
     <Tab.Navigator
       tabBarOptions={{
@@ -26,11 +28,11 @@ const TopTab = ({ theme }) => (
         }
       }}
     >
-      <Tab.Screen name="Featured" component={Text} />
+      <Tab.Screen name="Featured" component={Tester} />
       <Tab.Screen name="Categories" component={Text} />
     </Tab.Navigator>
     <TopBar />
   </>
 );
 
-export default TopTab;
+export default TopTabNavigator;
