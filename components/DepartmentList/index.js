@@ -1,9 +1,11 @@
 import React from "react";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import styled from "styled-components";
-import DepartmentListItem from "../DepartmentListItem";
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectDepartments } from "../../redux/department/selectors";
 
-const categories = ["Men's", "Women's", "Boy", "Girl"];
+import DepartmentListItem from "../DepartmentListItem";
 
 const Container = styled.View`
   background-color: white;
@@ -13,7 +15,7 @@ const Container = styled.View`
   left: 15px;
 `;
 
-const DepartmentList = ({ navigation }) => (
+const DepartmentList = ({ navigation, departments }) => (
   <TouchableWithoutFeedback
     style={{
       backgroundColor: "transparent",
@@ -23,14 +25,18 @@ const DepartmentList = ({ navigation }) => (
     onPress={() => navigation.pop()}
   >
     <Container>
-      {categories.map((label) => (
+      {departments.map((label) => (
         <DepartmentListItem
           key={label}
           label={label}
-          navigation={navigation}
         />
       ))}
     </Container>
   </TouchableWithoutFeedback>
 );
-export default DepartmentList;
+
+const mapStateToProps = createStructuredSelector({
+  departments: selectDepartments
+});
+
+export default connect(mapStateToProps, null)(DepartmentList);
