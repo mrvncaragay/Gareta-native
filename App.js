@@ -5,7 +5,7 @@ import { ActivityIndicator } from "react-native";
 import { ThemeProvider } from "styled-components";
 import * as Font from "expo-font";
 import { store, persistor } from "./redux/store";
-import theme from "./Theme";
+import theme from "./theme";
 import GaretaApp from "./GaretaApp";
 
 

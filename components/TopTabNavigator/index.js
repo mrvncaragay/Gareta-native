@@ -3,6 +3,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import styled from "styled-components";
 
 import TopBar from "../TopBar";
+import Btn from "../Button";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -13,7 +14,7 @@ const Text = styled.Text`
   color: ${(props) => props.theme.common.main}
 `;
 
-const Tester = () => <Text style={{ top: 50 }}>Hi</Text>;
+const Tester = () => <Btn />;
 
 const TopTabNavigator = ({ theme }) => (
   <>
