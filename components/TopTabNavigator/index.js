@@ -1,9 +1,10 @@
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import styled from "styled-components";
-
 import TopBar from "../TopBar";
-import Btn from "../Button";
+
+// Shared screens
+import { Men as MenFeatured } from "../../screens";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -13,8 +14,6 @@ const Text = styled.Text`
   font-weight: bold;
   color: ${(props) => props.theme.common.main}
 `;
-
-const Tester = () => <Btn />;
 
 const TopTabNavigator = ({ theme }) => (
   <>
@@ -29,7 +28,7 @@ const TopTabNavigator = ({ theme }) => (
         }
       }}
     >
-      <Tab.Screen name="Featured" component={Tester} />
+      <Tab.Screen name="Featured" component={MenFeatured} />
       <Tab.Screen name="Categories" component={Text} />
     </Tab.Navigator>
     <TopBar />

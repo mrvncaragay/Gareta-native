@@ -24,6 +24,7 @@ module.exports = {
   ],
   rules: {
     "linebreak-style": 0,
+    "react/jsx-props-no-spreading": "off",
     "comma-dangle": ["error", "never"],
     "react/prop-types": 0,
     "quotes": ["error", "double"],

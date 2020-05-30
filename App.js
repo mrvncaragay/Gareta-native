@@ -18,7 +18,8 @@ export default () => {
       await Font.loadAsync({
         "SourceSerifPro-Bold": require("./assets/fonts/SourceSerifPro-Bold.ttf"),
         "SourceSerifPro-Regular": require("./assets/fonts/SourceSerifPro-Regular.ttf"),
-        "SourceSerifPro-SemiBold": require("./assets/fonts/SourceSerifPro-SemiBold.ttf")
+        "SourceSerifPro-SemiBold": require("./assets/fonts/SourceSerifPro-SemiBold.ttf"),
+        "IMFellDoublePica-Italic": require("./assets/fonts/IMFellDoublePica-Italic.ttf")
       });
 
       setLoaded(true);
