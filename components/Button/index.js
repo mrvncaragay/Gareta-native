@@ -2,8 +2,13 @@ import React from "react";
 import { TouchableNativeFeedback } from "react-native";
 import styled from "styled-components";
 
+const Container = styled.View`
+  width: 100%;
+  padding: 16px;
+  alignItems: center;
+`;
+
 const View = styled.View`
-  top: 50px;
   justifyContent: center;
   alignItems: center;
   height: 40px;
@@ -19,11 +24,13 @@ const Text = styled.Text`
 `;
 
 const Button = () => (
-  <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple("#EEE")}>
-    <View>
-      <Text>SHOP NOW</Text>
-    </View>
-  </TouchableNativeFeedback>
+  <Container>
+    <TouchableNativeFeedback background={TouchableNativeFeedback.Ripple("#EEE")}>
+      <View>
+        <Text>SHOP NOW</Text>
+      </View>
+    </TouchableNativeFeedback>
+  </Container>
 );
 
 export default Button;

@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 const Image = styled.Image`
   width: 100%;
-  aspectRatio: ${200 / 76};
 `;
 
-const CustomImage = ({ uri }) => (
-  <Image source={{ uri }} />
+const CustomImage = ({ uri, ratio }) => (
+  <Image source={{ uri }} aspectRatio={ratio} />
 );
 
 export default CustomImage;

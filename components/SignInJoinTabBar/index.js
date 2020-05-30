@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Text from "../Text";
 
 const Container = styled.View`
-  flex: 1;
   flexDirection: row;
   height: 60px;
   padding: 10px;
