@@ -3,8 +3,7 @@ import styled from "styled-components";
 import Image from "../Image";
 import Text from "../Text";
 
-const Container = styled.View`
-`;
+const Container = styled.View``;
 
 const TextContainer = styled.View`
   position: absolute;
@@ -12,6 +11,7 @@ const TextContainer = styled.View`
   width: 100%;
   alignItems: center;
   padding: 20px;
+  backgroundColor: "rgba(0, 0, 0, 0.35)";
 `;
 
 export const SummerPromo = () => (
