@@ -2,7 +2,7 @@ import departmentActionsTypes from "./types";
 
 const INITIAL_STATE = {
   department: "Men's",
-  departments: ["Men's", "Women's", "Boys", "Girls"]
+  departments: ["Men's", "Women's"]
 };
 
 const departmentReducer = (state = INITIAL_STATE, action) => {

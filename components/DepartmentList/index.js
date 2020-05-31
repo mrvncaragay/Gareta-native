@@ -10,7 +10,6 @@ import DepartmentListItem from "../DepartmentListItem";
 const Container = styled.View`
   background-color: white;
   width: 150px;
-  height: 200px;
   top: 20px;
   left: 15px;
 `;
