@@ -4,7 +4,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator, CardStyleInterpolators } from "@react-navigation/stack";
 
 // Shared components
-import { DepartmentList, BottomTabNavigator } from "./components";
+import { DepartmentList } from "./components";
+import { BottomTabNavigator } from "./navigations";
 
 const Tab = createStackNavigator();
 

@@ -8,9 +8,9 @@ import {
 const Men = () => {
   const shortText = (
     <>
-      <Text color="white" fontSize={24} letterSpacing={1}>SHORTCUT TO SUMMER</Text>
-      <Text color="white" fontSize={14} style={{ lineHeight: 30 }} letterSpacing={1}>Featuring new must-have</Text>
-      <Text color="white" fontSize={12} letterSpacing={1}>for the season ahead.</Text>
+      <Text color="white" fontSize={24} letterSpacing={1} fontFamily="SourceSerifPro-Bold">SHORTCUT TO SUMMER</Text>
+      <Text color="white" fontSize={14} style={{ lineHeight: 30 }} letterSpacing={1} fontFamily="SourceSerifPro-Regular">Featuring new must-have</Text>
+      <Text color="white" fontSize={12} letterSpacing={1} fontFamily="SourceSerifPro-Regular">for the season ahead.</Text>
     </>
   );
 

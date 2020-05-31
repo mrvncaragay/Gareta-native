@@ -1,7 +1,9 @@
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import styled from "styled-components";
-import TopBar from "../TopBar";
+
+// Shared components
+import { TopBar } from "../../components";
 
 // Shared screens
 import { Men as MenFeatured } from "../../screens";
