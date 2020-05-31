@@ -11,7 +11,7 @@ const TextContainer = styled.View`
   alignItems: center;
   justifyContent: center;
   padding: 20px;
-  backgroundColor: "rgba(0, 0, 0, 0.20)";
+  backgroundColor: "rgba(0, 0, 0, 0.10)";
 `;
 
 const OverlayImageWithText = ({ url, ratio, texts }) => (
