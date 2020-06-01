@@ -8,9 +8,15 @@ import {
 const Men = () => {
   const dressText = (
     <>
-      <Text color="black" fontSize={24} letterSpacing={1} fontFamily="IMFellDoublePica-Italic">SHORTCUT TO SUMMER</Text>
-      <Text color="black" fontSize={16} style={{ lineHeight: 30 }} letterSpacing={1}>Soak up the sunshine wherever you</Text>
-      <Text color="black" fontSize={14} letterSpacing={1}>are in new summer dresses.</Text>
+      <Text fontSize={24} letterSpacing={1} fontFamily="IMFellDoublePica-Italic">SHORTCUT TO SUMMER</Text>
+      <Text
+        fontSize={16}
+        style={{ lineHeight: 30 }}
+        letterSpacing={1}
+      >
+        Soak up the sunshine wherever you
+      </Text>
+      <Text fontSize={14} letterSpacing={1}>are in new summer dresses.</Text>
     </>
   );
 
