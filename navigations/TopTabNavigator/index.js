@@ -1,6 +1,5 @@
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import styled from "styled-components";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { selectDepartment } from "../../redux/department/selectors";
@@ -9,16 +8,9 @@ import { selectDepartment } from "../../redux/department/selectors";
 import { TopBar } from "../../components";
 
 // Shared screens
-import { Men as MenFeatured, Women as WomenFeatured } from "../../screens";
+import { MenFeatured, WomenFeatured, WomenCategory } from "../../screens";
 
 const Tab = createMaterialTopTabNavigator();
-
-const Text = styled.Text`
-  font-size: 10px;
-  letter-spacing: 0.5px;
-  font-weight: bold;
-  color: ${(props) => props.theme.common.main}
-`;
 
 const TopTabNavigator = ({ theme, department }) => {
   const departmentList = (dpt) => {
@@ -30,6 +22,14 @@ const TopTabNavigator = ({ theme, department }) => {
     }
   };
 
+  const categoryList = (category) => {
+    switch (category) {
+      case "Women's":
+        return WomenCategory;
+      default:
+        return MenFeatured;
+    }
+  };
   return (
     <>
       <Tab.Navigator
@@ -44,7 +44,7 @@ const TopTabNavigator = ({ theme, department }) => {
         }}
       >
         <Tab.Screen name="Featured" component={departmentList(department)} />
-        <Tab.Screen name="Categories" component={Text} />
+        <Tab.Screen name="Categories" component={categoryList(department)} />
       </Tab.Navigator>
       <TopBar />
     </>
