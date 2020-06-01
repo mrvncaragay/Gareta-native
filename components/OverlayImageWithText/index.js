@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import Image from "../Image";
 
-const Container = styled.View``;
+const Container = styled.View`
+  marginTop: 10px;
+`;
 
 const TextContainer = styled.View`
   position: absolute;

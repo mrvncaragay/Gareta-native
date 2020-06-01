@@ -1,8 +1,12 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { ScrollView } from "react-native";
+
+import { NewArrival } from "../../../components";
 
 const Women = () => (
-  <View style={{ top: 50 }}><Text>Women</Text></View>
+  <ScrollView style={{ marginTop: 50 }}>
+    <NewArrival />
+  </ScrollView>
 );
 
 export default Women;

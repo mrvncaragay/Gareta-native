@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, TouchableOpacity } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 import styled from "styled-components";
@@ -9,6 +9,8 @@ import { selectDepartment } from "../../redux/department/selectors";
 
 // Remove this later after testing
 import { persistor } from "../../redux/store";
+
+import Text from "../Text";
 
 const Container = styled.View`
   flex-direction: row;
@@ -29,7 +31,7 @@ const TopBar = ({ department }) => {
   return (
     <Container>
       <TouchableOpacity onPress={() => navigation.navigate("DepartmentList")}>
-        <Text style={{ color: "white", fontSize: 16 }}>
+        <Text color="white" size={16}>
           {department}
           &#9660;
         </Text>

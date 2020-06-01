@@ -8,23 +8,23 @@ import {
 const Men = () => {
   const dressText = (
     <>
-      <Text fontSize={24} letterSpacing={1} fontFamily="IMFellDoublePica-Italic">SHORTCUT TO SUMMER</Text>
+      <Text size={24} letterSpacing={1} fontFamily="IMFellDoublePica-Italic">SHORTCUT TO SUMMER</Text>
       <Text
-        fontSize={16}
+        size={16}
         style={{ lineHeight: 30 }}
         letterSpacing={1}
       >
         Soak up the sunshine wherever you
       </Text>
-      <Text fontSize={14} letterSpacing={1}>are in new summer dresses.</Text>
+      <Text size={14} letterSpacing={1}>are in new summer dresses.</Text>
     </>
   );
 
   const summerPromoText = (
     <>
-      <Text color="white" fontSize={38} fontFamily="IMFellDoublePica-Italic">Summer Sale</Text>
-      <Text color="white" fontSize={14} style={{ lineHeight: 40 }} fontFamily="SourceSerifPro-Regular">up to 50% off*</Text>
-      <Text color="white" fontSize={12} letterSpacing={2}>PLUS, 25% OFF ENTIRE PURCHASE**</Text>
+      <Text color="white" size={38} fontFamily="IMFellDoublePica-Italic">Summer Sale</Text>
+      <Text color="white" size={14} style={{ lineHeight: 40 }} fontFamily="SourceSerifPro-Regular">up to 50% off*</Text>
+      <Text color="white" size={12} letterSpacing={2}>PLUS, 25% OFF ENTIRE PURCHASE**</Text>
     </>
   );
 
@@ -36,13 +36,13 @@ const Men = () => {
         texts={summerPromoText}
         ratio={200 / 76}
       />
-      <Button />
+      <Button size="medium" variant="outlined"><Text>SHOP NOW</Text></Button>
       <OverlayImageWithText
         url="https://gareta.s3-us-west-1.amazonaws.com/Native/Season+Promo/WomenSummer.jpg"
         texts={dressText}
         ratio={1}
       />
-      <Button />
+      <Button size="medium" variant="outlined"><Text>SHOP NOW</Text></Button>
     </ScrollView>
   );
 };

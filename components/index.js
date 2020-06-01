@@ -6,3 +6,4 @@ export { default as Button } from "./Button";
 export { default as DepartmentList } from "./DepartmentList";
 export { default as SignInJoinTabBar } from "./SignInJoinTabBar";
 export { default as OverlayImageWithText } from "./OverlayImageWithText";
+export { default as NewArrival } from "./NewArrival";
