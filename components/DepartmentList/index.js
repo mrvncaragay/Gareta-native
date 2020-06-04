@@ -12,6 +12,8 @@ const Container = styled.View`
   width: 150px;
   top: 20px;
   left: 15px;
+  borderWidth: 1px;
+  borderColor: #bababa;
 `;
 
 const DepartmentList = ({ navigation, departments }) => (
