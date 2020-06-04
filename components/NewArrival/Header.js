@@ -9,7 +9,6 @@ const Container = styled.View`
   flexDirection: row;
   justifyContent: space-between;
   alignItems: center;
-  backgroundColor: white;
   paddingLeft: 15px;
   paddingRight: 15px;
 `;
