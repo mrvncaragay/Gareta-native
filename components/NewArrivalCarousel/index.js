@@ -5,15 +5,16 @@ import NewArrivalCarouselItem from "../NewArrivalCarouselItem";
 const DATA = [
   {
     id: "21",
-    url: "https://gareta.s3-us-west-1.amazonaws.com/Native/New+Arrival/Women's/asset+41.webp"
+    url: "https://gareta.s3-us-west-1.amazonaws.com/Native/Categories/Women/New+Arrival/asset+5.webp"
   },
   {
     id: "1",
-    url: "https://gareta.s3-us-west-1.amazonaws.com/Native/New+Arrival/Women's/asset+39.jpeg"
+    url: "https://gareta.s3-us-west-1.amazonaws.com/Native/Categories/Women/New+Arrival/asset+15.webp"
+
   },
   {
     id: "212",
-    url: "https://gareta.s3-us-west-1.amazonaws.com/Native/New+Arrival/Women's/asset+5.webp"
+    url: "https://gareta.s3-us-west-1.amazonaws.com/Native/Categories/Women/New+Arrival/asset+27.jpeg"
   }
 ];
 
