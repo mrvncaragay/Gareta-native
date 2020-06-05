@@ -8,7 +8,9 @@ import { selectDepartment } from "../../redux/department/selectors";
 import { TopBar } from "../../components";
 
 // Shared screens
-import { MenFeatured, WomenFeatured, WomenCategory } from "../../screens";
+import {
+  MenFeatured, WomenFeatured, WomenCategory, MenCategory
+} from "../../screens";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -27,7 +29,7 @@ const TopTabNavigator = ({ theme, department }) => {
       case "Women's":
         return WomenCategory;
       default:
-        return MenFeatured;
+        return MenCategory;
     }
   };
   return (
