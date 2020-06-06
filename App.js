@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, YellowBox } from "react-native";
 import { ThemeProvider } from "styled-components";
 import * as Font from "expo-font";
+import { decode, encode } from "base-64";
 import { store, persistor } from "./redux/store";
 import theme from "./theme";
 import GaretaApp from "./GaretaApp";
 
+//* ** Fixes the issue "Can't find a variable atob" ***
+if (!global.btoa) { global.btoa = encode; }
+if (!global.atob) { global.atob = decode; }
+//* * END ***
 
 export default () => {
   const [loaded, setLoaded] = useState(false);

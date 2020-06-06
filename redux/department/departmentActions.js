@@ -6,4 +6,16 @@ export const changeDepartment = (department) => ({
   payload: department
 });
 
-export const deleteMeLater = () => ({});
+export const fetchDepartmentStart = () => ({
+  type: departmentActionsTypes.FETCH_DEPARTMENT_START
+});
+
+export const fetchDepartmentSuccess = (directoriesMap) => ({
+  type: departmentActionsTypes.FETCH_DEPARTMENT_SUCCESS,
+  payload: directoriesMap
+});
+
+export const fetchDepartmentFailure = (errorMessage) => ({
+  type: departmentActionsTypes.FETCH_DEPARTMENT_FAILURE,
+  payload: errorMessage
+});

@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ScrollView } from "react-native";
 
+import { connect } from "react-redux";
 import { NewArrival, CategoryList } from "../../../components";
 
-const Men = () => (
-  <ScrollView style={{ marginTop: 50 }}>
-    <NewArrival />
-    <CategoryList />
-  </ScrollView>
-);
+import { fetchDepartmentStart } from "../../../redux/department/departmentActions";
 
-export default Men;
+const Men = ({ fetchDepartmentStart }) => {
+  useEffect(() => {
+    fetchDepartmentStart();
+  }, [fetchDepartmentStart]);
+
+  return (
+    <ScrollView style={{ marginTop: 50 }}>
+      <NewArrival />
+      <CategoryList />
+    </ScrollView>
+  );
+};
+
+export default connect(null, { fetchDepartmentStart })(Men);
